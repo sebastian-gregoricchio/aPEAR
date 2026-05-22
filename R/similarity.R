@@ -5,17 +5,18 @@
 #'
 #' @param x list of lists.
 #'
-#' @importFrom bayesbio jaccardSets
 #'
 #' @noRd
 #'
 jaccard <- function(x) {
   sim <- emptyMatrix(x)
 
+  jaccardSets <- function(set1, set2) {length(intersect(set1, set2)) / length(union(set1, set2))}
+
   for (i in seq_along(x)) {
     for (j in seq_along(x)) {
       if (j > i) { break }
-      sim[ i, j ] <- bayesbio::jaccardSets(x[[i]], x[[j]])
+      sim[ i, j ] <- jaccardSets(x[[i]], x[[j]])
       sim[ j, i ] <- sim[ i, j ]
     }
   }
