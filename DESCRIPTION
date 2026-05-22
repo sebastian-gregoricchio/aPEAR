@@ -20,7 +20,7 @@ Suggests: Spectrum, clusterProfiler, gprofiler2, DOSE, org.Hs.eg.db,
         testthat (>= 3.0.0), knitr, rmarkdown, stringr
 Depends: R (>= 3.5.0)
 Config/testthat/edition: 3
-Imports: arules, bayesbio, data.table, dplyr, igraph, lsa, MCL,
+Imports: arules, data.table, dplyr, igraph, lsa, MCL,
         reshape2, tibble, utils, stats, methods, ggplot2, ggrepel,
         ggforce
 VignetteBuilder: knitr
